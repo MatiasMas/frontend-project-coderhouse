@@ -1,0 +1,62 @@
+.item-detail-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.04);
+    font-family: "Calibri Light", sans-serif;
+}
+
+.item-detail-img {
+    width: 100%;
+    height: 750px;
+}
+
+.item-detail-description {
+    text-align: justify;
+}
+
+.price-section {
+
+}
+
+.item-price {
+    font-size: 50px;
+    color: #c93131;
+}
+
+.item-price-disclaimer {
+    margin-bottom: 0;
+}
+
+.item-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.price-info {
+
+}
+
+.rating-section {
+    background-color: rgba(0, 0, 255, 0.15);
+    padding: 20px;
+}
+
+.stars-section {
+    display: flex;
+    justify-content: center;
+}
+
+.item-counter {
+    max-width: 80%;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+
+}

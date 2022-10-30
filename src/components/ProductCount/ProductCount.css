@@ -1,0 +1,22 @@
+.counterBox {
+    background-color: rgba(67, 114, 49, 0.32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.counterButtons {
+    display: flex;
+    height: 30px;
+    gap: 20px;
+
+}
+
+.counterAddProductsButton {
+    width: 100%;
+}
+
+.count-number {
+    font-size: 20px;
+}

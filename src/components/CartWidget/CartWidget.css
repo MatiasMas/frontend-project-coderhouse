@@ -1,0 +1,12 @@
+.cart-container {
+    display: flex;
+    align-items: center;
+}
+
+.cartwidget-quantity {
+    padding: 5px;
+}
+
+.cart-link {
+    padding-top: 7px;
+}

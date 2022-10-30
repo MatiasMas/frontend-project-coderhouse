@@ -1,0 +1,6 @@
+.product-cards {
+    padding: 20px 20px 0 20px;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}

@@ -1,0 +1,22 @@
+.anistore-brand-icon {
+    padding-left: 12px;
+}
+
+.navbar-options {
+    margin: 0;
+    padding: 10px 10px 10px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input {
+    width: 350px !important;
+}
+
+.add-product {
+    color: white !important;
+    background-color: #c93131;
+    padding: 2px 20px;
+    border-radius: 3px;
+}
