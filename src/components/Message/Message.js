@@ -1,3 +1,5 @@
+import "./Message.css";
+
 const Message = ({message}) => {
     return (
         <div>
