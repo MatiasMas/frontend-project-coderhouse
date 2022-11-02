@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import MessageList from "../MessageList/MessageList";
+import "./MessageListContainer.css";
 
 const MessageListContainer = ({socket}) => {
 
@@ -8,7 +9,6 @@ const MessageListContainer = ({socket}) => {
     const [messageEmail, setMessageEmail] = useState("");
 
     useEffect(() => {
-        console.log("reloading");
         socket.emit("getMessages");
         socket.on("savedMessages", (data) => {
             setMessages(data);
@@ -23,7 +23,6 @@ const MessageListContainer = ({socket}) => {
     const addMessage = (event) => {
         event.preventDefault();
 
-        console.log("emitted");
         socket.emit("addMessage", {email: messageEmail, message: messageText});
         setMessageText("");
     };
@@ -36,8 +35,9 @@ const MessageListContainer = ({socket}) => {
         );
     } else {
         return (
-            <div>
-                <form id="message-fields" onSubmit={addMessage}>
+            <div className="chat">
+                <MessageList messages={messages}/>
+                <form className="chat-form" id="message-fields" onSubmit={addMessage}>
                     <label htmlFor="email">Email: </label>
                     <input type="text" id="email" name="email" value={messageEmail}
                            onChange={event => setMessageEmail(event.target.value)}/>
@@ -46,7 +46,6 @@ const MessageListContainer = ({socket}) => {
                            onChange={event => setMessageText(event.target.value)}/>
                     <button type="submit">Send Message</button>
                 </form>
-                <MessageList messages={messages}/>
             </div>
         );
     }

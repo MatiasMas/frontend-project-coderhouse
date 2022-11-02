@@ -1,0 +1,20 @@
+.message {
+    display: flex;
+    gap: 10px;
+}
+
+.message-email {
+    color: #c93131;
+    width: 25%;
+}
+
+.message-text {
+    color: #1e6100;
+    width: 50%;
+}
+
+.message-date {
+    text-align: end;
+    color: #48468c;
+    width: 25%;
+}

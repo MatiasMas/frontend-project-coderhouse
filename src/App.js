@@ -25,7 +25,7 @@ const App = () => {
                     <Route path="/product/:id" element={<ProductDetailContainer/>}/>
                     <Route path="/cart" element={<Cart/>}/>
                     <Route path="/chat" element={<MessageListContainer socket={socket}/>}/>
-                    <Route path="/add-product" element={<AddProductForm/>}/>
+                    <Route path="/add-product" element={<AddProductForm socket={socket}/>}/>
                 </Routes>
             </CustomProvider>
         </BrowserRouter>
