@@ -19,4 +19,13 @@
     background-color: #c93131;
     padding: 2px 20px;
     border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.logout-button {
+    color: white !important;
+    background-color: black;
+    padding: 2px 20px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }

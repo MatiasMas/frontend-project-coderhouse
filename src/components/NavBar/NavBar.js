@@ -19,6 +19,7 @@ const NavBar = () => {
                 <NavLink to="category/figures">Figures</NavLink>
                 <NavLink to="category/mangas">Mangas</NavLink>
                 <NavLink to="chat">Chat</NavLink>
+                <NavLink className={'logout-button'} to="login">Logout</NavLink>
                 <NavLink className={'add-product'} to="add-product">Add Product</NavLink>
                 <CartWidget/>
             </ul>
