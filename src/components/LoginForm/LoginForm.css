@@ -13,3 +13,9 @@
 #login-form > button {
     width: 250px;
 }
+
+.register-button {
+    margin-top: 10px;
+    color: darkslateblue !important;
+    text-decoration: underline blue !important;
+}

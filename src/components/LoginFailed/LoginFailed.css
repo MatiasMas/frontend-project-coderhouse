@@ -1,0 +1,11 @@
+.login-failed {
+    display: flex;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto auto;
+    background-color: #cb5252;
+    font-weight: bold;
+    color: #eaeaea;
+    padding: 20px;
+    border-radius: 3px;
+}

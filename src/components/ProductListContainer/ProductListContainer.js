@@ -1,17 +1,18 @@
 import './ProductListContainer.css';
 import ProductList from "../ProductList/ProductList";
 import {useEffect, useState} from "react";
-import {getProductsFromFirebase} from "../../database-conectors/firebase";
-import {useParams} from "react-router-dom";
-import {getProductsFromLocal} from "../../database-conectors/local";
+import {useNavigate, useParams} from "react-router-dom";
+import Axios from "axios";
 
 const ProductListContainer = (props) => {
 
     const [products, setProducts] = useState([]);
     let {category} = useParams();
 
+    const nav = useNavigate();
+
     const getItemsByCategory = (category, items) => {
-        if (category === undefined) {
+        if (category === undefined || category === null) {
             return items;
         }
 
@@ -19,16 +20,20 @@ const ProductListContainer = (props) => {
     };
 
     useEffect(() => {
-        const promise = getProductsFromLocal();
-        // const promise = getProductsFromFirebase();
-        promise.then((result) => {
-            const myItems = getItemsByCategory(category, result);
-
+        Axios({
+            method: "GET",
+            withCredentials: true,
+            url: "http://localhost:8080/api/products",
+        }).then(res => {
+            const myItems = getItemsByCategory(category, res.data.products);
             setProducts(myItems);
-        })
-            .catch(() => {
-                console.log("Request FAIL");
-            });
+        }).catch((err) => {
+            if (err.response.status === 401) {
+                nav("/login");
+            } else {
+                console.log(err);
+            }
+        });
 
     }, [category]);
 
